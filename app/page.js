@@ -8,19 +8,35 @@ import { PartnerHospitalsSection } from '@/components/partner-hospitals-section'
 import { CustomerReviewSection } from '@/components/customer-review-section';
 import { NeedySupportSection } from '@/components/needy-support-section';
 import React from 'react';
+import GyneFertilityCareBox from '@/components/gyne-fertility-care-box';
+import { TreatmentPackagesSection } from '@/components/treatment-packages-section';
+import { OrderMedicineSection } from '@/components/order-medicine-section';
+import { InternationalTreatmentTravelSection } from '@/components/international-treatment-travel-section';
+import { EventsSection } from '@/components/events-section';
+import { PublicationsSection } from '@/components/publications-section';
+import { AssociationSection } from '@/components/association-section';
+import { HeroBanner } from '@/components/hero-banner';
 
 const page = () => {
   return (
     <div>
+      <HeroBanner/>
       <FeatureFlow/>
-      <BrowseBySpecialty/>
-      <CareSection/>
+      <GyneFertilityCareBox/>
+      {/* <BrowseBySpecialty/> */}
+      {/* <CareSection/> */}
       <TopDoctorsSection/>
-      <TopHospitalsSection/>
-      <PartnerHospitalsSection/>
-      <PromotionalSection/>
+      <TreatmentPackagesSection/>
+      <OrderMedicineSection/>
+      <InternationalTreatmentTravelSection/>
       <CustomerReviewSection/>
-      <NeedySupportSection/>
+      <EventsSection/>
+      <PartnerHospitalsSection/>
+      <PublicationsSection/>
+      <AssociationSection/>
+      {/* <TopHospitalsSection/> */}
+      <PromotionalSection/>
+      {/* <NeedySupportSection/> */}
     </div>
   );
 };

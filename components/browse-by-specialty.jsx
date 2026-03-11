@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const specialties = [
   { title: 'Cardiology', doctors: '2,500+ Doctors', image: 'https://images.unsplash.com/photo-1666214280557-f1b5022eb634?q=80&w=1200&auto=format&fit=crop' },
@@ -33,20 +34,28 @@ export const BrowseBySpecialty = () => {
             return (
               <article
                 key={index}
-                className="bg-teal-50/40 border border-teal-100 rounded-2xl p-6 hover:bg-teal-700 group transition-colors duration-300">
-                <div className="rounded-xl overflow-hidden mb-4 border border-teal-100">
-                  <img
+                className="group rounded-2xl border border-teal-100 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-teal-300">
+                <div className="relative overflow-hidden rounded-xl mb-4">
+                  <Image
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-36 object-cover"
+                    width={1200}
+                    height={700}
+                    className="h-40 w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
+                  <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-teal-900/20 to-transparent" />
                 </div>
-              <h3 className="text-xl font-bold text-neutral-900 group-hover:text-white mb-1">
-                {item.title}
-              </h3>
-              <p className="text-neutral-600 group-hover:text-teal-100 text-sm font-medium">
-                {item.doctors}
-              </p>
+                <h3 className="text-xl font-bold text-neutral-900 mb-1 tracking-tight">
+                  {item.title}
+                </h3>
+                <p className="text-neutral-600 text-sm font-medium mb-3">
+                  {item.doctors}
+                </p>
+                <button
+                  type="button"
+                  className="rounded-full border border-teal-200 px-3 py-1.5 text-xs font-semibold text-teal-700 transition hover:bg-teal-50">
+                  View Specialists
+                </button>
               </article>
             )
           })}

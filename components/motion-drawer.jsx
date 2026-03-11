@@ -1,4 +1,4 @@
-'use client';;
+'use client';
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X } from 'lucide-react';
@@ -57,6 +57,7 @@ const MotionDrawer = ({
 
   // Content
   children,
+  headerContent,
 
   // Behavior
   isOpen: controlledIsOpen,
@@ -69,6 +70,7 @@ const MotionDrawer = ({
   className = '',
   contentClassName = '',
   overlayClassName = '',
+  headerClassName = '',
 
   // Animation
   animationConfig = {
@@ -195,6 +197,12 @@ const MotionDrawer = ({
               animate='open'
               exit='closed'
               transition={animationConfig}>
+              {headerContent && (
+                <div className={cn('absolute top-2 left-8 flex items-center', headerClassName)}>
+                  {headerContent}
+                </div>
+              )}
+
               {/* Close Button */}
               {showToggleButton && (
                 <motion.button

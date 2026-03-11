@@ -43,11 +43,14 @@ export const CustomerReviewSection = () => {
   return (
     <section className="py-20 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-4 tracking-tight">
+        <div className="mb-10 text-center md:text-left">
+          <p className="mb-2 text-[11px] font-bold uppercase tracking-[0.18em] text-teal-700">
+            Patient Voices
+          </p>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-neutral-900">
             Customer Reviews
           </h2>
-          <p className="text-neutral-600 text-lg">
+          <p className="mx-auto mt-3 max-w-2xl text-sm text-neutral-600 md:mx-0 md:text-base">
             Real feedback from patients who trust MyDoctor for everyday healthcare needs.
           </p>
         </div>
